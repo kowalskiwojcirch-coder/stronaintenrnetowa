@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Logowanie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+  <h2>Dostęp Administracja</h2>
+
+  <input type="password" id="password" placeholder="Hasło">
+  <button onclick="login()">Wejdź</button>
+  <p id="error">Złe hasło</p>
+</div>
+
+<script src="snow.js"></script>
+<script>
+function login() {
+  const correctPassword = "administracjaflastrashop2233445566";
+  const input = document.getElementById("password").value;
+
+  if (input === correctPassword) {
+    window.location.href = "panel.html";
+  } else {
+    document.getElementById("error").style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
